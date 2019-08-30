@@ -63,7 +63,7 @@ public class Locator {
 		String xpath;
 
 		Properties prop = new Properties();
-		String path=PathUtility.OR_File;
+		String path=PathUtility.XPathFile1;
 		//System.out.println(path);
 		FileInputStream file = new FileInputStream(path);
 		//FileInputStream file = new FileInputStream(".\\src\\test\\java\\config\\OR_E1.properties");
