@@ -6,6 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
@@ -31,6 +32,7 @@ public class Test1 {
 
 	@Test
 	public void meth1() throws InterruptedException {
+		reports.setAnalysisStrategy(AnalysisStrategy.CLASS);
 		test = reports.createTest("Login");
 		driver.get("https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html");
 		System.out.println("Page opened");
