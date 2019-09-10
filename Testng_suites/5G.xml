@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="5G">
+	<test thread-count="5" name="5G Export Import">
+		<classes>
+			<class name="TestCases.FiveG.FiveGExportImport" />		
+		</classes>
+	</test>
+	<test thread-count="5" name="Terminal Types">
+		<classes>
+			<class name="TestCases.FiveG.TerminalTypes" />
+		</classes>
+	</test>
+</suite> 

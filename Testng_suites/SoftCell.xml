@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SoftCell">
+	<test thread-count="5" name="GDL">
+		<classes>
+			<class name="TestCases.SoftCell.GDL" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Global Editor">
+		<classes>
+			<class name="TestCases.SoftCell.GobalEditor" />
+		</classes>
+	</test>
+</suite> 
