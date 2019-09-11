@@ -1,6 +1,8 @@
 package TestCases.SoftCell;
 
 import org.testng.ITestContext;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -23,6 +25,11 @@ public class GDL {
 		context.setAttribute("extent", reports);
 	}
 	
+	/*@BeforeClass
+	public void setup(ITestContext context)
+	{
+		reports=(ExtentReports) context.getAttribute("extent");
+	}*/
 	@Test(priority=1)
 	public void creatingProperty() {
 		test = reports.createTest("creatingProperty");
@@ -35,6 +42,12 @@ public class GDL {
 		test = reports.createTest("deleteProperty");
 		test.pass("deleteProperty passed ");
 
+	}
+	
+	@AfterSuite
+	public void teardown() {
+		//driver.quit();
+		reports.flush();
 	}
 
 }

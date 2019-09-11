@@ -18,13 +18,13 @@ import org.testng.ITestContext;
 import com.aventstack.extentreports.ExtentTest;
 import utils.Locator;
 
-public class Button {
+public class UDF1_Button {
 
 	WebDriver driver;
 	ExtentTest test;
 	Locator locator;
 
-	public Button(WebDriver drivers,ITestContext context) {
+	public UDF1_Button(WebDriver drivers,ITestContext context) {
 		driver = drivers;
 	
 		locator = new Locator();

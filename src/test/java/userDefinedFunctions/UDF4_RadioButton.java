@@ -9,12 +9,14 @@ import com.aventstack.extentreports.ExtentTest;
 
 import utils.Locator;
 
-public class RadioButton {
+public class UDF4_RadioButton extends UDF3_TextBox{
 	WebDriver driver;
 	Locator locator;
 	ExtentTest test;
 	
-	public RadioButton(WebDriver drivers,ITestContext context) {
+	public UDF4_RadioButton(WebDriver drivers,ITestContext context) {
+		
+		super(drivers,context);
 		driver = drivers;
 		locator = new Locator();
 		test = (ExtentTest)context.getAttribute("extent");

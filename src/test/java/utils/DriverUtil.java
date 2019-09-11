@@ -65,7 +65,7 @@ public class DriverUtil {
 			if (browser.equalsIgnoreCase("Chrome")) {
 				
 				System.setProperty("webdriver.chrome.driver", "./Drivers/"+PathUtility.chromeDriverName+".exe");
-				java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.WARNING);//disables selenium logs
+				//java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.WARNING);//disables selenium logs
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 		 		driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);

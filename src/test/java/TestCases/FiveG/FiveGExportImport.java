@@ -4,8 +4,10 @@ package TestCases.FiveG;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -13,7 +15,7 @@ import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import userDefinedFunctions.Link;
+import userDefinedFunctions.UDF2_Link;
 import utils.DriverUtil;
 import utils.ExtentManager;
 /**
@@ -22,21 +24,24 @@ import utils.ExtentManager;
  * 
  *
  */
+
 public class FiveGExportImport {
 	WebDriver driver;
-	Link link;
+	UDF2_Link link;
 	ExtentReports reports;
 	ExtentTest test;
 	ExtentManager ExtentManagerObj;
 
+
 	@BeforeSuite
 	public void setup(ITestContext context) {
-		/*driver = new DriverUtil().DriverSetup("chrome");
-		link = new Link(driver, context);*/
+		driver = new DriverUtil().DriverSetup("chrome");
+		link = new UDF2_Link(driver, context);
 		// Extent Reports
 		ExtentManagerObj = new ExtentManager();
 		reports = ExtentManagerObj.GetExtent("10.0.3 Test Results");
 		context.setAttribute("extent", reports);
+		context.setAttribute("driver", driver);
 	}
 
 	@Test(priority=1)
@@ -67,7 +72,7 @@ public class FiveGExportImport {
 
 	@AfterSuite
 	public void teardown() {
-		//driver.quit();
+		driver.quit();
 		reports.flush();
 	}
 }

@@ -22,14 +22,15 @@ import com.aventstack.extentreports.ExtentTest;
 import utils.Locator;
 
 
-public class Link {
+public class UDF2_Link extends UDF1_Button{
 
 	WebDriver driver;
 	Locator locator;
 	ExtentTest test;
 	
-	public Link(WebDriver driver,ITestContext context)
+	public UDF2_Link(WebDriver driver,ITestContext context)
 	{
+		super(driver,context);
 		this.driver=driver;
 		locator = new Locator();
 		test = (ExtentTest)context.getAttribute("extent");

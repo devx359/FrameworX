@@ -17,13 +17,14 @@ import com.aventstack.extentreports.ExtentTest;
 import utils.Locator;
 
 
-public class TextBox {
+public class UDF3_TextBox extends UDF2_Link {
 
 	WebDriver driver;
 	Locator locator;
 	ExtentTest test;
 
-	public TextBox(WebDriver driver,ITestContext context) {
+	public UDF3_TextBox(WebDriver driver,ITestContext context) {
+		super(driver,context);
 		this.driver = driver;
 		locator= new Locator();		
 		test = (ExtentTest)context.getAttribute("extent");

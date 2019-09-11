@@ -3,7 +3,7 @@
 <suite name="5G">
 	<test thread-count="5" name="5G Export Import">
 		<classes>
-			<class name="TestCases.FiveG.FiveGExportImport" />		
+			<class name="TestCases.FiveG.FiveGExportImport" />
 		</classes>
 	</test>
 	<test thread-count="5" name="Terminal Types">

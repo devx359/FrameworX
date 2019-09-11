@@ -22,12 +22,13 @@ import utils.Locator;
 generic functions should be added here
 Author:Debapriyo 13-oct-2018
 */
-public class OtherFunctions {
+public class UDF5_OtherFunctions extends UDF4_RadioButton {
 	WebDriver driver;
 	ExtentTest test;
 	Locator locator;
 
-	public OtherFunctions(WebDriver drivers,ITestContext context) {
+	public UDF5_OtherFunctions(WebDriver drivers,ITestContext context) {
+		super(drivers,context);
 		driver = drivers;
 		locator = new Locator();
 		test = (ExtentTest)context.getAttribute("extent");
