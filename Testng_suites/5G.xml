@@ -6,9 +6,14 @@
 			<class name="TestCases.FiveG.FiveGExportImport" />
 		</classes>
 	</test>
-	<test thread-count="5" name="Terminal Types">
+	<!-- <test thread-count="5" name="Terminal Types">
 		<classes>
 			<class name="TestCases.FiveG.TerminalTypes" />
+		</classes>
+	</test> -->
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="TestCases.FiveG.Test1" />
 		</classes>
 	</test>
 </suite> 

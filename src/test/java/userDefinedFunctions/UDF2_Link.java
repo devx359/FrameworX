@@ -28,12 +28,12 @@ public class UDF2_Link extends UDF1_Button{
 	Locator locator;
 	ExtentTest test;
 	
-	public UDF2_Link(WebDriver driver,ITestContext context)
+	public UDF2_Link(ITestContext context)
 	{
-		super(driver,context);
-		this.driver=driver;
+		super(context);
+		driver = (WebDriver) context.getAttribute("driver");	
 		locator = new Locator();
-		test = (ExtentTest)context.getAttribute("extent");
+		test = (ExtentTest)context.getAttribute("test");
 	}
 
 	public void navigateToURL(String actualURL) {

@@ -24,11 +24,10 @@ public class UDF1_Button {
 	ExtentTest test;
 	Locator locator;
 
-	public UDF1_Button(WebDriver drivers,ITestContext context) {
-		driver = drivers;
-	
+	public UDF1_Button(ITestContext context) {
+		driver = (WebDriver) context.getAttribute("driver");	
 		locator = new Locator();
-		test = (ExtentTest)context.getAttribute("extent");
+		test = (ExtentTest)context.getAttribute("test");
 	}
 
 	// WebDriverSelector webdriver = new WebDriverSelector();

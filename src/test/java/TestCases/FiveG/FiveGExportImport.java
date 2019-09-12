@@ -36,7 +36,7 @@ public class FiveGExportImport {
 	@BeforeSuite
 	public void setup(ITestContext context) {
 		driver = new DriverUtil().DriverSetup("chrome");
-		link = new UDF2_Link(driver, context);
+		
 		// Extent Reports
 		ExtentManagerObj = new ExtentManager();
 		reports = ExtentManagerObj.GetExtent("10.0.3 Test Results");

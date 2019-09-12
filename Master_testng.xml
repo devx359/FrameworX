@@ -4,6 +4,6 @@
 
 	<suite-files>
 		<suite-file path="./Testng_suites/5G.xml" />
-		<suite-file path="./Testng_suites/SoftCell.xml" />
+		<!--  <suite-file path="./Testng_suites/SoftCell.xml" /> -->
 	</suite-files>
 </suite>

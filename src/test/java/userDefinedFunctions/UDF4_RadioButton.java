@@ -14,12 +14,12 @@ public class UDF4_RadioButton extends UDF3_TextBox{
 	Locator locator;
 	ExtentTest test;
 	
-	public UDF4_RadioButton(WebDriver drivers,ITestContext context) {
+	public UDF4_RadioButton(ITestContext context) {
 		
-		super(drivers,context);
-		driver = drivers;
+		super(context);
+		driver = (WebDriver) context.getAttribute("driver");	
 		locator = new Locator();
-		test = (ExtentTest)context.getAttribute("extent");
+		test = (ExtentTest)context.getAttribute("test");
 	}
 
 	

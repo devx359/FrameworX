@@ -23,11 +23,11 @@ public class UDF3_TextBox extends UDF2_Link {
 	Locator locator;
 	ExtentTest test;
 
-	public UDF3_TextBox(WebDriver driver,ITestContext context) {
-		super(driver,context);
-		this.driver = driver;
-		locator= new Locator();		
-		test = (ExtentTest)context.getAttribute("extent");
+	public UDF3_TextBox(ITestContext context) {
+		super(context);
+		driver = (WebDriver) context.getAttribute("driver");	
+		locator = new Locator();
+		test = (ExtentTest)context.getAttribute("test");
 	}
 
 	public void SetText(String strxpath, String strData) {

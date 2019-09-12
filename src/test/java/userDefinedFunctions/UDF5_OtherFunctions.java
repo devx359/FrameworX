@@ -27,11 +27,11 @@ public class UDF5_OtherFunctions extends UDF4_RadioButton {
 	ExtentTest test;
 	Locator locator;
 
-	public UDF5_OtherFunctions(WebDriver drivers,ITestContext context) {
-		super(drivers,context);
-		driver = drivers;
+	public UDF5_OtherFunctions(ITestContext context) {
+		super(context);
+		driver = (WebDriver) context.getAttribute("driver");	
 		locator = new Locator();
-		test = (ExtentTest)context.getAttribute("extent");
+		test = (ExtentTest)context.getAttribute("test");
 	}
 	
 	public void openNewTabandSwitchToIt(WebDriver driver)

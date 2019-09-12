@@ -99,7 +99,7 @@ public class DriverUtil {
 			}
 
 		} catch (Exception e) {
-			System.out.println("In DriverUtil " + e);
+			System.out.println("Driver Setup error " + e);
 		}
 		return driver;
 	}

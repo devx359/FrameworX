@@ -17,8 +17,12 @@ public class PathUtility {
 	public static String mysqlpassword;
 	public static String mysqldbname;
 	public static String screenshotFolder = ".\\Screenshots\\";
+	
 	public static String XPathFile1 = ".\\src\\test\\java\\config\\xpathList1.properties";
 	public static String XPathFile2 = ".\\src\\test\\java\\config\\xpathList2.properties";
+	public static String FiveGPropertyFiles="XPathFile1;XPathFile2";
+	
+	public static String activePropertyFileSet=FiveGPropertyFiles;
 	public String weburl;
 	public static String psubmitfile;
 	public static String simple_OP_tool_url;
