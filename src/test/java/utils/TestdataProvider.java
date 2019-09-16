@@ -16,7 +16,7 @@ public class TestdataProvider {
 
 		IOExcel obj = new IOExcel();
 
-		obj.excelSetup("./src/test/java/dataEngine/" + datasheet);
+		obj.excelSetup(datasheet);
 		context.setAttribute("Excelobj", obj);
 
 		Object[][] TesttabArray = null;

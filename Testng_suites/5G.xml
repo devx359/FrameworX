@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="5G">
+	<parameter name="Excelsheet" value="./src/test/resources/testData/td1.xlsx" />
+	<parameter name="sheetName" value="Sheet1" />
+	<listeners>
+		<listener class-name="utils.ListenerUtil"></listener>
+		<listener class-name="utils.SuiteListener"></listener>
+	</listeners>
 	<test thread-count="5" name="5G Export Import">
 		<classes>
 			<class name="TestCases.FiveG.FiveGExportImport" />
 		</classes>
 	</test>
-	<!-- <test thread-count="5" name="Terminal Types">
-		<classes>
-			<class name="TestCases.FiveG.TerminalTypes" />
-		</classes>
-	</test> -->
+	<!-- <test thread-count="5" name="Terminal Types"> <classes> <class name="TestCases.FiveG.TerminalTypes" 
+		/> </classes> </test> -->
 	<test thread-count="5" name="Test">
+
 		<classes>
 			<class name="TestCases.FiveG.Test1" />
 		</classes>
