@@ -3,9 +3,14 @@ package TestCases.FiveG;
 
 
 import java.util.Hashtable;
+import java.util.List;
 
 import org.json.simple.JSONObject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -38,7 +43,7 @@ public class Test1 {
 		
 	}
 	
-	@Test(priority=1,enabled=true)
+	@Test(priority=1,enabled=false)
 	public void meth(ITestContext context) throws InterruptedException
 	{
 		throw new NullPointerException();
@@ -52,19 +57,19 @@ public class Test1 {
 		Thread.sleep(2000);*/
 	}
 	
-	@Test(dataProvider="testSteps",dataProviderClass=utils.TestdataProvider.class,priority=2)
+	@Test(dataProvider="testSteps",dataProviderClass=utils.TestdataProvider.class,priority=2 ,enabled=false)
 	public void datadrive(Hashtable<String,String> tdata)
 	{
 		System.out.println(tdata.get("id")+" password: "+tdata.get("password"));
 	}
 	
-	@Test(dataProvider="testSteps",dataProviderClass=utils.TestdataProvider.class,priority=3)
+	@Test(dataProvider="testSteps",dataProviderClass=utils.TestdataProvider.class,priority=3,enabled=false)
 	public void datadrive2(Hashtable<String,String> tdata)
 	{
 		System.out.println(tdata.get("id")+" password: "+tdata.get("password"));
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4,enabled=false)
 	public void apitesting()
 	{
 		JSONObject jsonreq = new JSONObject();
@@ -94,5 +99,84 @@ public class Test1 {
 		System.out.println(res.prettyPrint());
 		
 	}
+	
+	@Test(priority=5)
+	public void gtest() throws InterruptedException
+	{
+		driver.get("https://www.google.com");
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Ranorex");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//span[contains(.,'ranorex tutorial')]")).click();
+		
+		List<WebElement> ele = driver.findElements(By.xpath("//div[@class='r']/a"));
+		
+		
+		for(WebElement el: ele)
+		{
+			System.out.println(el.findElement(By.xpath("h3/div")).getText());
+			System.out.println(el.getAttribute("href"));
+			
+		}
+		
+		driver.findElement(By.xpath("//a[@id='pnnext']")).click();
+		System.out.println("next page");
+		List<WebElement> ele2 = driver.findElements(By.xpath("//div[@class='r']/a"));
+		
+		
+		for(WebElement el: ele2)
+		{
+			System.out.println(el.findElement(By.xpath("h3/div")).getText());
+			System.out.println(el.getAttribute("href"));
+			
+		}
+		
+		Thread.sleep(2000);
+		
+		WebElement link=driver.findElement(By.xpath("//div[contains(text(),'Ranorex - Automated Testing Tool for Desktop, ')]/ancestor::a"));
+		
+		Actions action = new Actions(driver);
+		action.contextClick(link).sendKeys(Keys.ENTER).sendKeys(Keys.ENTER).build().perform();
+		Thread.sleep(2000);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

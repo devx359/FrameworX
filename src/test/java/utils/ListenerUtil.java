@@ -47,7 +47,7 @@ public class ListenerUtil implements ITestListener
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("on test starrrt");
+		//System.out.println("on test starrrt");
 		//ash=(AshotUtil) context.getAttribute("ashot");
 		//driver=(WebDriver) context.getAttribute("driverobj");
 		
@@ -58,7 +58,7 @@ public class ListenerUtil implements ITestListener
 		// TODO Auto-generated method stub
 		//report=(ExtentReports) context.getAttribute("extent");
 		//report.flush();
-		System.out.println("on finish");
+	//	System.out.println("on finish");
 		
 	}
 
