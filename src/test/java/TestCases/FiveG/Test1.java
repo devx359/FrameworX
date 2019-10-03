@@ -17,16 +17,23 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.jayway.restassured.RestAssured;
 
 import org.json.simple.JSONObject;
 
 import config.PathUtility;
-import io.restassured.http.ContentType;
+/*import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
-import io.restassured.*;
+import io.restassured.response.ResponseBody;*/
+/*import io.restassured.*;*/
 import userDefinedFunctions.UDF5_OtherFunctions;
-import static io.restassured.RestAssured.given;
+import static com.jayway.restassured.RestAssured.given;
+/*import com.jayway.jsonpath.JsonPath;*/
+import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.filter.log.RequestLoggingFilter;
+import com.jayway.restassured.http.ContentType;
+import com.jayway.restassured.response.Response;
+import com.jayway.restassured.response.ResponseBody;
 
 
 public class Test1 {
