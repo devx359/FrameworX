@@ -2,9 +2,12 @@ package TestCases.FiveG;
 
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import static com.jayway.restassured.RestAssured.*;
 
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 /*import io.restassured.RestAssured;
@@ -18,9 +21,11 @@ import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ResponseBody;
 
+import junit.framework.Assert;
+
 public class Test2 {
 	
-	@Test
+	@Test(enabled=false)
 	public void meth()
 	{
 		RestAssured.baseURI="https://reqres.in/api";
@@ -48,5 +53,25 @@ public class Test2 {
 		
 	
 	}
+	
+	@Test(enabled=false)
+	public void meth2()
+	{
+		Assert.fail();
+		SoftAssert ass = new SoftAssert();
+		ass.assertEquals(10, 10);
+		ass.assertAll();
+		
+		HashSet<String> set = new HashSet<String>();
+		set.add("a");
+		set.add("b");
+		
+		Iterator<String> it = set.iterator();
+		while(it.hasNext())
+		{
+			
+		}
+	}
 
+	
 }

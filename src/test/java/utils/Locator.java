@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import config.PathUtility;
 
-public class Locator {
+public class Locator implements ILocator{
 
 	public By getWebElement(String locator) throws FileNotFoundException, IOException {
 
