@@ -2,6 +2,7 @@ package utils.listeners;
 
 import java.lang.reflect.Field;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -17,11 +18,11 @@ import utils.Screenshot;
 public class TestListener implements ITestListener {
 	ExtentReports report;
 	ExtentTest test;
+	Logger log;
 
 	@Override
 	public void onTestStart(ITestResult result) {
-
-		System.out.println("onTestStart");
+		log.debug("onTestStart");
 
 		Class<? extends ITestResult> testClass = (Class<? extends ITestResult>) result.getInstance().getClass();
 		Class<? extends ITestResult> baseTestClass = (Class<? extends ITestResult>) testClass.getSuperclass();
@@ -31,6 +32,12 @@ public class TestListener implements ITestListener {
 			report = (ExtentReports) driverField.get(result.getInstance());
 			test = report.createTest(result.getMethod().getMethodName());
 			test.info("DESCRIPTION : " + result.getMethod().getDescription());
+
+			// set logs
+			log.info("------------------------------" + result.getMethod().getMethodName()
+					+ "----------------------------------------------");
+			log.info("DESCRIPTION : " + result.getMethod().getDescription());
+
 		} catch (Exception e) {
 
 			e.printStackTrace();
@@ -40,8 +47,9 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("onTestSuccess");
+		log.debug("onTestSuccess");
 		test.pass(result.getMethod().getMethodName() + " PASSED");
+		log.info(result.getMethod().getMethodName() + " PASSED");
 	}
 
 	/*
@@ -56,11 +64,12 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult testResult) {
 		try {
-			System.out.println("Inside test failure");
+			log.debug("Inside onTestFailure");
 			test.fail(testResult.getMethod().getMethodName() + " FAILED");
-			test.log(Status.FAIL,testResult.getThrowable());
-			
+			test.log(Status.FAIL, testResult.getThrowable()); // show stacktrace in extent
 
+			log.error("METHOD " + testResult.getMethod().getMethodName().toString() + " FAILED");
+			log.error(testResult.getThrowable().toString());
 
 			// attach screenshot---------------------------
 			Screenshot screenshot = new Screenshot(driver(testResult));
@@ -69,8 +78,9 @@ public class TestListener implements ITestListener {
 			if (imagepath != null) {
 				String path = System.getProperty("user.dir");
 				String finalPath = path + imagepath.replace("/", "\\");
-				test.addScreenCaptureFromPath(finalPath); //add screenshot to Extent Report
-				Reporter.log("<a href='"+ finalPath+ "'> <img src='"+ finalPath + "' height='100' width='100'/> </a>");
+				log.info("Screenshot Saved to : " + finalPath);
+				test.addScreenCaptureFromPath(finalPath); // add screenshot to Extent Report
+				Reporter.log("<a href='" + finalPath + "'> <img src='" + finalPath + "' height='100' width='100'/> </a>"); //add screenshot to testng report
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -113,6 +123,7 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
+		log.debug("onTestSkipped");
 	}
 
 	@Override
@@ -121,12 +132,18 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("onStart");
-		//test=context.getAttribute("extent");
+		
+		log = Logger.getLogger("devpinoyLogger");
+		context.setAttribute("logger", log);
+		// System.out.println("onStart");
+		log.debug("onStart");
+		log.info("Test execution started");
+		// test=context.getAttribute("extent");
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		System.out.println("onFinish");
+		// System.out.println("onFinish");
+		log.debug("Test Execution Finished");
 	}
 }

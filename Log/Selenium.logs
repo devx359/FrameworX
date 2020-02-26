@@ -1,0 +1,51 @@
+15:07:22,433 DEBUG devpinoyLogger<strong>{1}</strong>:139 - onStart
+15:07:22,442  INFO devpinoyLogger<strong>{1}</strong>:140 - Test execution started
+15:07:22,452 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:22,452  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------meth----------------------------------------------
+15:07:22,452  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : Does some hifi testing
+15:07:22,452 DEBUG devpinoyLogger<strong>{1}</strong>:18 - opening webiste
+15:07:29,212 DEBUG devpinoyLogger<strong>{1}</strong>:23 - Closing webiste
+15:07:29,215 DEBUG devpinoyLogger<strong>{1}</strong>:67 - Inside onTestFailure
+15:07:29,219 ERROR devpinoyLogger<strong>{1}</strong>:71 - METHOD meth FAILED
+15:07:29,219 ERROR devpinoyLogger<strong>{1}</strong>:72 - java.lang.NullPointerException
+15:07:29,516  INFO devpinoyLogger<strong>{1}</strong>:81 - Screenshot Saved to : D:\EclipsePhotonWorkspace\Frameworx.\Screenshots\listener_meth2020-02-26T15_07_29_229.png
+15:07:29,518 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:29,519  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------meth2----------------------------------------------
+15:07:29,519  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : checks something
+15:07:29,522 DEBUG devpinoyLogger<strong>{1}</strong>:50 - onTestSuccess
+15:07:29,522  INFO devpinoyLogger<strong>{1}</strong>:52 - meth2 PASSED
+15:07:29,524 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:29,525  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------meth3----------------------------------------------
+15:07:29,525  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : checks something more
+15:07:29,526 DEBUG devpinoyLogger<strong>{1}</strong>:50 - onTestSuccess
+15:07:29,527  INFO devpinoyLogger<strong>{1}</strong>:52 - meth3 PASSED
+15:07:29,527 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:29,528  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------meth4----------------------------------------------
+15:07:29,528  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : null
+15:07:29,528 DEBUG devpinoyLogger<strong>{1}</strong>:51 - opening webiste
+15:07:29,529 DEBUG devpinoyLogger<strong>{1}</strong>:50 - onTestSuccess
+15:07:29,530  INFO devpinoyLogger<strong>{1}</strong>:52 - meth4 PASSED
+15:07:29,551 DEBUG devpinoyLogger<strong>{1}</strong>:147 - Test Execution Finished
+15:07:32,900 DEBUG devpinoyLogger<strong>{1}</strong>:139 - onStart
+15:07:32,900  INFO devpinoyLogger<strong>{1}</strong>:140 - Test execution started
+15:07:32,904 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:32,905  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------m1----------------------------------------------
+15:07:32,905  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : null
+15:07:32,906 DEBUG devpinoyLogger<strong>{1}</strong>:50 - onTestSuccess
+15:07:32,906  INFO devpinoyLogger<strong>{1}</strong>:52 - m1 PASSED
+15:07:32,907 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:32,908  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------m2----------------------------------------------
+15:07:32,908  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : null
+15:07:32,909 DEBUG devpinoyLogger<strong>{1}</strong>:50 - onTestSuccess
+15:07:32,909  INFO devpinoyLogger<strong>{1}</strong>:52 - m2 PASSED
+15:07:32,911 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:32,911  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------m3----------------------------------------------
+15:07:32,912  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : null
+15:07:32,913 DEBUG devpinoyLogger<strong>{1}</strong>:50 - onTestSuccess
+15:07:32,913  INFO devpinoyLogger<strong>{1}</strong>:52 - m3 PASSED
+15:07:32,914 DEBUG devpinoyLogger<strong>{1}</strong>:25 - onTestStart
+15:07:32,915  INFO devpinoyLogger<strong>{1}</strong>:37 - ------------------------------m4----------------------------------------------
+15:07:32,915  INFO devpinoyLogger<strong>{1}</strong>:39 - DESCRIPTION : null
+15:07:32,916 DEBUG devpinoyLogger<strong>{1}</strong>:50 - onTestSuccess
+15:07:32,917  INFO devpinoyLogger<strong>{1}</strong>:52 - m4 PASSED
+15:07:32,926 DEBUG devpinoyLogger<strong>{1}</strong>:147 - Test Execution Finished

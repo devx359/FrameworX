@@ -1,0 +1,51 @@
+26/02/2020 15:07:22 DEBUG onStart
+26/02/2020 15:07:22 INFO  Test execution started
+26/02/2020 15:07:22 DEBUG onTestStart
+26/02/2020 15:07:22 INFO  ------------------------------meth----------------------------------------------
+26/02/2020 15:07:22 INFO  DESCRIPTION : Does some hifi testing
+26/02/2020 15:07:22 DEBUG opening webiste
+26/02/2020 15:07:29 DEBUG Closing webiste
+26/02/2020 15:07:29 DEBUG Inside onTestFailure
+26/02/2020 15:07:29 ERROR METHOD meth FAILED
+26/02/2020 15:07:29 ERROR java.lang.NullPointerException
+26/02/2020 15:07:29 INFO  Screenshot Saved to : D:\EclipsePhotonWorkspace\Frameworx.\Screenshots\listener_meth2020-02-26T15_07_29_229.png
+26/02/2020 15:07:29 DEBUG onTestStart
+26/02/2020 15:07:29 INFO  ------------------------------meth2----------------------------------------------
+26/02/2020 15:07:29 INFO  DESCRIPTION : checks something
+26/02/2020 15:07:29 DEBUG onTestSuccess
+26/02/2020 15:07:29 INFO  meth2 PASSED
+26/02/2020 15:07:29 DEBUG onTestStart
+26/02/2020 15:07:29 INFO  ------------------------------meth3----------------------------------------------
+26/02/2020 15:07:29 INFO  DESCRIPTION : checks something more
+26/02/2020 15:07:29 DEBUG onTestSuccess
+26/02/2020 15:07:29 INFO  meth3 PASSED
+26/02/2020 15:07:29 DEBUG onTestStart
+26/02/2020 15:07:29 INFO  ------------------------------meth4----------------------------------------------
+26/02/2020 15:07:29 INFO  DESCRIPTION : null
+26/02/2020 15:07:29 DEBUG opening webiste
+26/02/2020 15:07:29 DEBUG onTestSuccess
+26/02/2020 15:07:29 INFO  meth4 PASSED
+26/02/2020 15:07:29 DEBUG Test Execution Finished
+26/02/2020 15:07:32 DEBUG onStart
+26/02/2020 15:07:32 INFO  Test execution started
+26/02/2020 15:07:32 DEBUG onTestStart
+26/02/2020 15:07:32 INFO  ------------------------------m1----------------------------------------------
+26/02/2020 15:07:32 INFO  DESCRIPTION : null
+26/02/2020 15:07:32 DEBUG onTestSuccess
+26/02/2020 15:07:32 INFO  m1 PASSED
+26/02/2020 15:07:32 DEBUG onTestStart
+26/02/2020 15:07:32 INFO  ------------------------------m2----------------------------------------------
+26/02/2020 15:07:32 INFO  DESCRIPTION : null
+26/02/2020 15:07:32 DEBUG onTestSuccess
+26/02/2020 15:07:32 INFO  m2 PASSED
+26/02/2020 15:07:32 DEBUG onTestStart
+26/02/2020 15:07:32 INFO  ------------------------------m3----------------------------------------------
+26/02/2020 15:07:32 INFO  DESCRIPTION : null
+26/02/2020 15:07:32 DEBUG onTestSuccess
+26/02/2020 15:07:32 INFO  m3 PASSED
+26/02/2020 15:07:32 DEBUG onTestStart
+26/02/2020 15:07:32 INFO  ------------------------------m4----------------------------------------------
+26/02/2020 15:07:32 INFO  DESCRIPTION : null
+26/02/2020 15:07:32 DEBUG onTestSuccess
+26/02/2020 15:07:32 INFO  m4 PASSED
+26/02/2020 15:07:32 DEBUG Test Execution Finished

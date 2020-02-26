@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 public class Screenshot {
 
 	private WebDriver driver; 
-	  private String folderPath = "./target/screenshots/";
+	  private String folderPath = "./Screenshots/";
 	 
 	  public Screenshot(WebDriver driver)
 	  { 

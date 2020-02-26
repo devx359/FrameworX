@@ -1,5 +1,6 @@
 package TestCases.SoftCell;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,10 +14,13 @@ public class TC01 extends TestBase {
 	@Test(description="Does some hifi testing")
 	public void meth() throws InterruptedException {
 		
-
+		Logger log = Logger.getLogger("devpinoyLogger");
+		log.debug("opening webiste");
+		
 		//test = reports.createTest("Scenario 1");
 		driver.get("https://www.google.com/");
 		Thread.sleep(2000);
+		log.debug("Closing webiste");
 		// Assert.assertTrue(false);
 		throw new NullPointerException();
 		/*
@@ -38,5 +42,12 @@ public class TC01 extends TestBase {
 	{
 		//test = reports.createTest("Scenario 2");
 		Assert.assertTrue(true, "True");
+	}
+	
+	@Test
+	public void meth4()
+	{
+		Logger log = Logger.getLogger("devpinoyLogger");
+		log.debug("opening webiste");
 	}
 }

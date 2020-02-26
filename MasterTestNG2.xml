@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Test Suite">
+<listeners>
+	<listener class-name="utils.listeners.TestListener"/>
+	<listener class-name="utils.listeners.ExecutionList"/>
+</listeners>
+	<suite-files>
+		<suite-file path="./Testng_suites/suite1.xml" />
+		<suite-file path="./Testng_suites/suite2.xml" />
+	</suite-files>
+</suite> <!-- Suite -->
